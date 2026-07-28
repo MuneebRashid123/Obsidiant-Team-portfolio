@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obsidian Solutions — Team Portfolio</title>
+<link rel="icon" type="image/png" href="assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grid-texture"></div>
+<div class="preloader" id="preloader">
+  <img src="assets/logo-full.png" class="preloader-logo-img" alt="Obsidian Solutions"><div class="preloader-name"><span>Team Portfolio</span></div>
+  <div class="preloader-bar-track"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+  <div class="preloader-percent" id="preloaderPercent">0%</div>
+</div>
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="announce-bar" id="announceBar">
+  <div class="announce-track" id="announceTrack">
+    <span class="active">✦ Now accepting new projects — most replies within a day</span>
+    <span>✦ One team, six specialists, zero hand-off friction</span>
+    <span>✦ Remote-first — WhatsApp, email &amp; video calls</span>
+  </div>
+  <button class="announce-close" id="announceClose" aria-label="Dismiss">✕</button>
+</div>
+
+<header id="siteHeader">
+  <div class="logo"><img src="assets/logo-icon.png" class="logo-mark" alt="Obsidian Solutions logo"> <span class="logo-text">Obsidian Solutions</span></div>
+  <nav>
+    <ul id="navList">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#ai" class="nav-link">AI</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#results" class="nav-link">Results</a></li>
+      <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+      <li><a href="#team" class="nav-link">Team</a></li>
+      <li><a href="#industries" class="nav-link">Industries</a></li>
+      <li><a href="#clients" class="nav-link">Clients</a></li>
+      <li><a href="#tools" class="nav-link">Tools</a></li>
+      <li><a href="#builder" class="nav-link">Build Team</a></li>
+      <li><a href="#why-us" class="nav-link">Why Us</a></li>
+      <li><a href="#process" class="nav-link">Process</a></li>
+      <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-glow-ring"></div>
+  <div class="hero-glow-ring-2"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow"><svg class="eyebrow-globe" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span class="dot-live"></span> Digital Marketing, Development &amp; Operations — Pakistan, Remote-First</div>
+      <h1>One agency. <span>Six specialists.</span> Every system your brand needs.</h1>
+      <div class="hero-ticker"><span class="ticker-caret"></span> <span id="heroTicker"></span></div>
+      <p class="lead">Obsidian Solutions brings web &amp; business systems, branding &amp; performance marketing, social media, customer experience, HR, and supply chain analytics under one roof — so growth doesn't get stuck between six different freelancers.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">✦ Start a project</a>
+        <a href="#team" class="btn btn-ghost">Meet the team</a>
+      </div>
+      <div class="hero-stats-mini">
+        <div class="hs-item"><span class="hs-num">6</span><span class="hs-label">Specialists</span></div>
+        <div class="hs-item"><span class="hs-num">15+</span><span class="hs-label">Real brands &amp; projects</span></div>
+        <div class="hs-item"><span class="hs-num">9</span><span class="hs-label">Industries</span></div>
+        <div class="hs-item"><span class="hs-num">1</span><span class="hs-label">Shared client, 4 specialists</span></div>
+      </div>
+    </div>
+    <div class="network-wrap" id="networkWrap">
+      <svg viewBox="0 0 440 440">
+        <g class="net-lines">
+          <path id="line1" class="net-line" d="M220,220 L220,60"/>
+          <path id="line2" class="net-line" d="M220,220 L367,140"/>
+          <path id="line3" class="net-line" d="M220,220 L367,300"/>
+          <path id="line4" class="net-line" d="M220,220 L220,380"/>
+          <path id="line5" class="net-line" d="M220,220 L73,300"/>
+          <path id="line6" class="net-line" d="M220,220 L73,140"/>
+        </g>
+        <circle cx="220" cy="60" r="4" fill="#C084FC"><animateMotion dur="2.6s" repeatCount="indefinite" path="M0,0 L0,160"/></circle>
+        <circle cx="367" cy="140" r="4" fill="#C084FC"><animateMotion dur="2.9s" repeatCount="indefinite" path="M0,0 L-147,80"/></circle>
+        <circle cx="367" cy="300" r="4" fill="#C084FC"><animateMotion dur="3.2s" repeatCount="indefinite" path="M0,0 L-147,-80"/></circle>
+        <circle cx="220" cy="380" r="4" fill="#C084FC"><animateMotion dur="2.4s" repeatCount="indefinite" path="M0,0 L0,-160"/></circle>
+        <circle cx="73" cy="300" r="4" fill="#C084FC"><animateMotion dur="3s" repeatCount="indefinite" path="M0,0 L147,-80"/></circle>
+        <circle cx="73" cy="140" r="4" fill="#C084FC"><animateMotion dur="2.7s" repeatCount="indefinite" path="M0,0 L147,80"/></circle>
+
+        <g class="node-circle">
+          <circle cx="220" cy="60" r="26" fill="#1C1726" stroke="#8B2FFF" stroke-width="1.5"/>
+          <text x="220" y="65" text-anchor="middle" class="node-label">MN</text>
+        </g>
+        <g class="node-circle">
+          <circle cx="367" cy="140" r="26" fill="#1C1726" stroke="#8B2FFF" stroke-width="1.5"/>
+          <text x="367" y="145" text-anchor="middle" class="node-label">HS</text>
+        </g>
+        <g class="node-circle">
+          <circle cx="367" cy="300" r="26" fill="#1C1726" stroke="#8B2FFF" stroke-width="1.5"/>
+          <text x="367" y="305" text-anchor="middle" class="node-label">AR</text>
+        </g>
+        <g class="node-circle">
+          <circle cx="220" cy="380" r="26" fill="#1C1726" stroke="#8B2FFF" stroke-width="1.5"/>
+          <text x="220" y="385" text-anchor="middle" class="node-label">IK</text>
+        </g>
+        <g class="node-circle">
+          <circle cx="73" cy="300" r="26" fill="#1C1726" stroke="#8B2FFF" stroke-width="1.5"/>
+          <text x="73" y="305" text-anchor="middle" class="node-label">DQ</text>
+        </g>
+        <g class="node-circle">
+          <circle cx="73" cy="140" r="26" fill="#1C1726" stroke="#8B2FFF" stroke-width="1.5"/>
+          <text x="73" y="145" text-anchor="middle" class="node-label">HA</text>
+        </g>
+
+        <g class="hub-circle">
+          <circle cx="220" cy="220" r="42" fill="url(#hubGrad)" />
+          <text x="220" y="216" text-anchor="middle" fill="#fff" font-family="Space Grotesk" font-weight="800" font-size="15">OS</text>
+          <text x="220" y="233" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-family="JetBrains Mono" font-size="8">AGENCY</text>
+        </g>
+        <defs>
+          <linearGradient id="hubGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#A855F7"/>
+            <stop offset="100%" stop-color="#5B189E"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- AUTO HERO BANNER SLIDER -->
+<div class="banner-slider-wrap">
+  <div class="banner-slider" id="bannerSlider">
+    <div class="hbs-track" id="hbsTrack">
+      <div class="hbs-slide" style="--slide-glow:#8B2FFF;">
+        <div class="hbs-visual"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div>
+        <div class="hbs-copy"><span class="hbs-tag">Web &amp; Business Systems</span><h3>Storefronts &amp; ERP built to be maintained, not just demoed</h3><p>MAISON, VELORA, and the Hunza Candle ERP/CRM/HR system — real, running software.</p></div>
+      </div>
+      <div class="hbs-slide" style="--slide-glow:#A855F7;">
+        <div class="hbs-visual"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7v16l-18-7z"/><path d="M11 15v4a2 2 0 0 0 4 0v-1"/></svg></div>
+        <div class="hbs-copy"><span class="hbs-tag">Branding &amp; Performance Marketing</span><h3>Visual identity and Meta Ads across five industries</h3><p>Education, hospitality, corporate, healthcare, and luxury retail — one specialist, five sectors.</p></div>
+      </div>
+      <div class="hbs-slide" style="--slide-glow:#C084FC;">
+        <div class="hbs-visual"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10l4-2v8l-4-2z"/></svg></div>
+        <div class="hbs-copy"><span class="hbs-tag">Social Media &amp; Content</span><h3>7 client brands, one content calendar mind</h3><p>Zarvangi, Netmatico, Grocery Ghar and more — managed across Instagram, Facebook, TikTok and X.</p></div>
+      </div>
+      <div class="hbs-slide" style="--slide-glow:#7C3AED;">
+        <div class="hbs-visual"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="6" height="7"/><rect x="9" y="8" width="6" height="12"/><rect x="15" y="4" width="6" height="16"/></svg></div>
+        <div class="hbs-copy"><span class="hbs-tag">Supply Chain &amp; Analytics</span><h3>Dashboards that cut reporting time by 60%</h3><p>Toyota Hyderabad Motors, Hunza Candle, and a mobile-service startup feasibility study.</p></div>
+      </div>
+      <div class="hbs-slide" style="--slide-glow:#9D4EDD;">
+        <div class="hbs-visual"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div>
+        <div class="hbs-copy"><span class="hbs-tag">Customer Service &amp; Sales</span><h3>30–40 conversations a day, most end in a sale</h3><p>Deelab and Hunza Candle — customer support that closes, not just replies.</p></div>
+      </div>
+    </div>
+    <button class="hbs-arrow hbs-prev" id="hbsPrev" aria-label="Previous">‹</button>
+    <button class="hbs-arrow hbs-next" id="hbsNext" aria-label="Next">›</button>
+    <div class="hbs-dots" id="hbsDots"></div>
+  </div>
+</div>
+
+<!-- HIGHLIGHTS -->
+<div class="highlights">
+  <div class="stats-grid" id="statsGrid">
+    <div class="stat-tile">
+      <div class="icon-wrap"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v2"/><path d="M17 8a3 3 0 1 1 3.5 5.9"/><path d="M21 21v-2a5 5 0 0 0-3-4.6"/></svg></div>
+      <div class="big-num"><span class="stat-live" data-target="6">0</span></div>
+      <div class="cap">In-house specialists</div>
+    </div>
+    <div class="stat-tile">
+      <div class="icon-wrap"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+      <div class="big-num"><span class="stat-live" data-target="9">0</span></div>
+      <div class="cap">Industries served</div>
+    </div>
+    <div class="stat-tile">
+      <div class="icon-wrap"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <div class="big-num"><span class="stat-live" data-target="15">0</span>+</div>
+      <div class="cap">Brands &amp; projects delivered</div>
+    </div>
+    <div class="stat-tile">
+      <div class="icon-wrap"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/><path d="M12 8v4l3 2"/></svg></div>
+      <div class="big-num"><span class="stat-live" data-target="1">0</span>-day</div>
+      <div class="cap">Typical reply time</div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Web &amp; Business Systems</span>
+    <span>HR &amp; Talent Operations</span>
+    <span>Supply Chain &amp; Analytics</span>
+    <span>Branding &amp; Performance Marketing</span>
+    <span>Customer Service &amp; Sales</span>
+    <span>Social Media &amp; Content</span>
+    <span>Web &amp; Business Systems</span>
+    <span>HR &amp; Talent Operations</span>
+    <span>Supply Chain &amp; Analytics</span>
+    <span>Branding &amp; Performance Marketing</span>
+    <span>Customer Service &amp; Sales</span>
+    <span>Social Media &amp; Content</span>
+  </div>
+</div>
+
+<!-- ABOUT / VISION -->
+<section id="about">
+  <div class="section-tag">About Us</div>
+  <h2 class="section-title">One team instead of six freelancers</h2>
+  <p class="section-sub">Obsidian Solutions started as six independent specialists who kept ending up on the same client projects. Instead of handing off between separate freelancers, we built one system: the same people, working together from day one.</p>
+  <div class="vision-wrap">
+    <div class="vision-card">
+      <div class="quote-mark">"</div>
+      <p>Strong systems, sharp branding, and genuine human conversation aren't separate jobs — they're one engine built to make growth durable, not just fast.</p>
+      <div class="who">— Obsidian Solutions, our operating philosophy</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-tag">Services</div>
+  <h2 class="section-title">Six pillars, one integrated engine</h2>
+  <p class="section-sub">Each pillar is led by the specialist who lives in it every day — and they work as one team, not six separate hand-offs.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div>
+      <h3>Web &amp; Business Systems</h3>
+      <p>Storefronts, ERP/CRM tooling, and WhatsApp-first checkout flows built to be maintained by a real team, not just demoed once.</p>
+      <div class="service-owner"><div class="mini-avatar">MN</div> Led by Muneeb</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a8 8 0 0 1 16 0v4a2 2 0 0 1-2 2h-1v-6h3M3 15a2 2 0 0 0 2 2h1v-6H3z"/></svg></div>
+      <h3>HR &amp; Talent Operations</h3>
+      <p>End-to-end recruitment, onboarding, payroll, and policy compliance run through Oracle HRMS, so people operations never fall through the cracks.</p>
+      <div class="service-owner"><div class="mini-avatar">HS</div> Led by Hafsa</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="6" height="7"/><rect x="9" y="8" width="6" height="12"/><rect x="15" y="4" width="6" height="16"/></svg></div>
+      <h3>Supply Chain &amp; Analytics</h3>
+      <p>Logistics coordination, inventory management, and Power BI / Python dashboards that turn operational data into faster, cheaper delivery.</p>
+      <div class="service-owner"><div class="mini-avatar">AR</div> Led by Abdul Raheem</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7v16l-18-7z"/><path d="M11 15v4a2 2 0 0 0 4 0v-1"/></svg></div>
+      <h3>Branding &amp; Performance Marketing</h3>
+      <p>Visual identity, pitch decks, and data-driven Meta Ads campaigns engineered for ROAS — across education, hospitality, healthcare, and retail.</p>
+      <div class="service-owner"><div class="mini-avatar">IK</div> Led by Irtaza</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div>
+      <h3>Customer Service &amp; Sales</h3>
+      <p>Order coordination and query resolution across 30–40 daily customer conversations — turning support interactions into completed, satisfied sales.</p>
+      <div class="service-owner"><div class="mini-avatar">DQ</div> Led by Duaa</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10l4-2v8l-4-2z"/></svg></div>
+      <h3>Social Media &amp; Content</h3>
+      <p>Content planning, copywriting, and day-to-day platform management across Instagram, Facebook, TikTok, and LinkedIn.</p>
+      <div class="service-owner"><div class="mini-avatar">HA</div> Led by Husnain</div>
+    </div>
+  </div>
+</section>
+
+<!-- AI-ENABLED WORK -->
+<section id="ai">
+  <div class="section-tag">◆ AI-Enabled Work</div>
+  <h2 class="section-title">Where AI actually shows up in our work</h2>
+  <p class="section-sub">Not an "AI agency" pitch — just the two places AI genuinely does real work inside the team today, plus where we're looking next.</p>
+
+  <div class="ai-grid">
+    <div class="ai-card">
+      <div class="ai-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.27a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg></div>
+      <span class="ai-tag">Live Prototype</span>
+      <h3>AI Outbound Call Agent</h3>
+      <p>Muneeb built a Node.js/Express prototype using Twilio Voice for the calling infrastructure and Claude to drive the conversation logic — with real compliance safeguards baked in: calling-hours enforcement, do-not-call list management, and mandatory AI disclosure on every call.</p>
+      <div class="service-owner"><div class="mini-avatar">MN</div> Built by Muneeb</div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7v16l-18-7z"/><path d="M11 15v4a2 2 0 0 0 4 0v-1"/></svg></div>
+      <span class="ai-tag">Certified</span>
+      <h3>AI-Powered Performance Ads</h3>
+      <p>Hafsa is certified in AI-Powered Performance Ads alongside Google Ads Display — applying automated audience targeting and campaign optimization tools rather than manual bid management.</p>
+      <div class="service-owner"><div class="mini-avatar">HS</div> Certified: Hafsa</div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+      <span class="ai-tag">Exploring</span>
+      <h3>Next: Practical, Not Novelty</h3>
+      <p>Where we're looking next — conversational support triage and automated first-pass reporting — but only where it genuinely saves a specialist's time, not AI for its own sake.</p>
+      <div class="service-owner"><div class="mini-avatar">OS</div> Team-wide direction</div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" style="background:linear-gradient(180deg,transparent,rgba(139,47,255,0.04),transparent);">
+  <div class="section-tag">Portfolio</div>
+  <h2 class="section-title">Real projects, by the person who built them</h2>
+  <p class="section-sub">Everything below is a real project shipped by one of our six specialists — filter by name to see their work specifically.</p>
+
+  <div class="portfolio-filter" id="portfolioFilter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="muneeb">Muneeb</button>
+    <button class="filter-btn" data-filter="hafsa">Hafsa</button>
+    <button class="filter-btn" data-filter="abdul">Abdul Raheem</button>
+    <button class="filter-btn" data-filter="irtaza">Irtaza</button>
+    <button class="filter-btn" data-filter="duaa">Duaa</button>
+    <button class="filter-btn" data-filter="husnain">Husnain</button>
+  </div>
+
+  <div class="portfolio-grid" id="portfolioGrid"></div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" style="background:linear-gradient(180deg,transparent,rgba(139,47,255,0.04),transparent);">
+  <div class="section-tag">Results</div>
+  <h2 class="section-title">Numbers behind the six pillars</h2>
+  <p class="section-sub">A snapshot of measurable outcomes across recent client work — one highlight per specialist.</p>
+
+  <div class="results-grid" id="resultsGrid">
+    <div class="result-card">
+      <div class="result-num"><span class="stat-live" data-target="7">0</span></div>
+      <p>Client brands actively supported across social platforms and Meta Ads campaigns</p>
+      <div class="result-owner"><div class="mini-avatar">HA</div> Social Media &amp; Content</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num"><span class="stat-live" data-target="5">0</span></div>
+      <p>Industries served with tailored branding and Meta Ads playbooks — from schools to luxury retail</p>
+      <div class="result-owner"><div class="mini-avatar">IK</div> Branding &amp; Marketing</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num"><span class="stat-live" data-target="60">0</span>%</div>
+      <p>Faster logistics reporting after moving clients onto Power BI dashboards</p>
+      <div class="result-owner"><div class="mini-avatar">AR</div> Supply Chain &amp; Analytics</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num"><span class="stat-live" data-target="0">0</span>-day</div>
+      <p>Onboarding gaps — payroll, paperwork, and orientation sorted before day one</p>
+      <div class="result-owner"><div class="mini-avatar">HS</div> HR &amp; Talent Ops</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num"><span class="stat-live" data-target="35">0</span>+</div>
+      <p>Customer conversations resolved daily, most ending in a completed sale</p>
+      <div class="result-owner"><div class="mini-avatar">DQ</div> Customer Service &amp; Sales</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num"><span class="stat-live" data-target="6">0</span></div>
+      <p>Business systems shipped — storefronts, ERP/CRM tools, attendance systems, and an AI call agent</p>
+      <div class="result-owner"><div class="mini-avatar">MN</div> Web &amp; Business Systems</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="section-tag">Case Studies</div>
+  <h2 class="section-title">A closer look at real outcomes</h2>
+  <p class="section-sub">Deeper dives into six pieces of client work — every result here is drawn directly from client feedback or shipped project scope.</p>
+
+  <div class="case-grid" id="caseGrid">
+    <div class="case-card">
+      <span class="case-tag">Web &amp; Systems</span>
+      <h4>Hunza Candle — Unified ERP/CRM/HR</h4>
+      <p>Muneeb built a single-file ERP/CRM/HR system covering order pipeline management, inventory tracking, WhatsApp-integrated lead management, and a dual-view HR module for admins and employees.</p>
+      <div class="case-result"><span class="cr-num">3-in-1</span><span class="cr-label">Orders, inventory &amp; HR unified</span></div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Supply Chain</span>
+      <h4>Logistics Dashboard for Hunza Candle</h4>
+      <p>Abdul Raheem built Excel and Power BI dashboards to track sales KPIs and logistics performance for B2B order fulfillment, cutting reporting time significantly for the operations team.</p>
+      <div class="case-result"><span class="cr-num">60%</span><span class="cr-label">Faster reporting</span></div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">HR &amp; Talent</span>
+      <h4>Recruitment &amp; Onboarding Overhaul</h4>
+      <p>Hafsa manages end-to-end recruitment and onboarding through Oracle HRMS — candidates have described paperwork, payroll, and orientation as fully sorted before their first day even started.</p>
+      <div class="case-result"><span class="cr-num">0-day</span><span class="cr-label">Onboarding gaps</span></div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Branding &amp; Marketing</span>
+      <h4>Enrollment Campaign for a Private School</h4>
+      <p>Irtaza redesigned a school's prospectus, campus visuals, and local enrollment ads — inquiries picked up within the first month of the new campaign going live.</p>
+      <div class="case-result"><span class="cr-num">30 days</span><span class="cr-label">To see inquiry uplift</span></div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Automotive</span>
+      <h4>Toyota Hyderabad — DMS &amp; Warranty Workflow</h4>
+      <p>Abdul Raheem operated the Dealer Management System for service records and spare-part tracking, streamlining the booking and warranty claim workflow and cutting delays close to half.</p>
+      <div class="case-result"><span class="cr-num">~50%</span><span class="cr-label">Fewer booking delays</span></div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Customer Service</span>
+      <h4>Two-Brand Customer Support Desk</h4>
+      <p>Duaa manages customer communication, order coordination, and query resolution across two fragrance and home-goods brands — handling 30 to 40 conversations on an average day.</p>
+      <div class="case-result"><span class="cr-num">30–40</span><span class="cr-label">Daily conversations</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="background:linear-gradient(180deg,transparent,rgba(139,47,255,0.04),transparent);">
+  <div class="section-tag">The Team</div>
+  <h2 class="section-title">Six specialists, working as one</h2>
+  <p class="section-sub">Every project is staffed by the person who actually does that work daily — reach any of them directly.</p>
+
+  <div class="team-grid">
+    <div class="team-card" data-member="muneeb">
+      <div class="team-top">
+        <div class="team-avatar">MN</div>
+        <div class="team-name">Muneeb</div>
+        <div class="team-role">Full-Stack Developer</div>
+      </div>
+      <div class="team-body">
+        <p>Builds the commerce and business systems Pakistani brands run on — storefronts, ERP/CRM tooling, and WhatsApp-first checkout flows shipped to be maintained by a real team.</p>
+        <div class="team-chips"><span class="team-chip">React</span><span class="team-chip">Node.js</span><span class="team-chip">WhatsApp API</span><span class="team-chip">MongoDB</span></div>
+        <button class="view-profile-btn" data-member="muneeb">View full profile <span>→</span></button>
+        <div class="team-contact">
+          <a href="mailto:muneeb@example.com" onclick="event.stopPropagation()">Email</a>
+          <a href="https://wa.me/923000000000" target="_blank" class="wa" onclick="event.stopPropagation()">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card" data-member="hafsa">
+      <div class="team-top">
+        <div class="team-avatar">HS</div>
+        <div class="team-name">Hafsa Shaikh</div>
+        <div class="team-role">HR &amp; Client Relations</div>
+      </div>
+      <div class="team-body">
+        <p>Runs end-to-end recruitment, onboarding, payroll, and compliance through Oracle HRMS — plus sales coordination and client relations on the side.</p>
+        <div class="team-chips"><span class="team-chip">Talent Acquisition</span><span class="team-chip">Oracle HRMS</span><span class="team-chip">Client Coordination</span></div>
+        <button class="view-profile-btn" data-member="hafsa">View full profile <span>→</span></button>
+        <div class="team-contact">
+          <a href="mailto:hs845257@gmail.com" onclick="event.stopPropagation()">Email</a>
+          <a href="https://wa.me/923360187511" target="_blank" class="wa" onclick="event.stopPropagation()">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card" data-member="abdul">
+      <div class="team-top">
+        <div class="team-avatar">AR</div>
+        <div class="team-name">Abdul Raheem</div>
+        <div class="team-role">Supply Chain &amp; Data Analytics</div>
+      </div>
+      <div class="team-body">
+        <p>Turns operational data into supply chain and logistics systems — Excel &amp; Power BI dashboards, vendor coordination, and route planning that measurably cut costs and delays.</p>
+        <div class="team-chips"><span class="team-chip">Power BI</span><span class="team-chip">Python</span><span class="team-chip">SAP</span></div>
+        <button class="view-profile-btn" data-member="abdul">View full profile <span>→</span></button>
+        <div class="team-contact">
+          <a href="mailto:abdulraheemimtiaz10@gmail.com" onclick="event.stopPropagation()">Email</a>
+          <a href="https://wa.me/923173890602" target="_blank" class="wa" onclick="event.stopPropagation()">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card" data-member="irtaza">
+      <div class="team-top">
+        <div class="team-avatar">IK</div>
+        <div class="team-name">Irtaza Khan</div>
+        <div class="team-role">Digital Marketing &amp; Branding</div>
+      </div>
+      <div class="team-body">
+        <p>Builds brand identity and performance campaigns across education, hospitality, corporate, healthcare, and luxury retail — visuals and ROAS working as one system.</p>
+        <div class="team-chips"><span class="team-chip">Branding</span><span class="team-chip">Meta Ads</span><span class="team-chip">ROAS Optimization</span></div>
+        <button class="view-profile-btn" data-member="irtaza">View full profile <span>→</span></button>
+        <div class="team-contact">
+          <a href="mailto:irtazakhankhan10@gmail.com" onclick="event.stopPropagation()">Email</a>
+          <a href="https://wa.me/923372489252" target="_blank" class="wa" onclick="event.stopPropagation()">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card" data-member="duaa">
+      <div class="team-top">
+        <div class="team-avatar">DQ</div>
+        <div class="team-name">Hafiza Duaa Qureshi</div>
+        <div class="team-role">Customer Service &amp; Sales</div>
+      </div>
+      <div class="team-body">
+        <p>Handles 30–40 customer conversations a day, coordinating orders and resolving queries — turning support interactions into completed, satisfied sales.</p>
+        <div class="team-chips"><span class="team-chip">Customer Support</span><span class="team-chip">Order Coordination</span><span class="team-chip">Sales Conversion</span></div>
+        <button class="view-profile-btn" data-member="duaa">View full profile <span>→</span></button>
+        <div class="team-contact">
+          <a href="mailto:duaaqureshi2k5@gmail.com" onclick="event.stopPropagation()">Email</a>
+          <a href="https://wa.me/923177734090" target="_blank" class="wa" onclick="event.stopPropagation()">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card" data-member="husnain">
+      <div class="team-top">
+        <div class="team-avatar">HA</div>
+        <div class="team-name">Syed Husnain Azmi</div>
+        <div class="team-role">Social Media Manager</div>
+      </div>
+      <div class="team-body">
+        <p>Manages social platforms and Meta Ads campaigns that build brand awareness and audience engagement, from content planning through to performance tracking.</p>
+        <div class="team-chips"><span class="team-chip">Social Media</span><span class="team-chip">Meta Ads</span><span class="team-chip">Shopify</span></div>
+        <button class="view-profile-btn" data-member="husnain">View full profile <span>→</span></button>
+        <div class="team-contact">
+          <a href="mailto:syedhusnainazmi@gmail.com" onclick="event.stopPropagation()">Email</a>
+          <a href="https://wa.me/923130485799" target="_blank" class="wa" onclick="event.stopPropagation()">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="section-tag">Industries</div>
+  <h2 class="section-title">Sector expertise across the team</h2>
+  <p class="section-sub">Between supply chain, marketing, and operations work, the team has hands-on experience across nine sectors.</p>
+
+  <div class="industries-grid" id="industriesGrid">
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div><h4>Education</h4></div>
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v20M3 7h5M3 12h5M15 22v-9a4 4 0 0 1 8 0v9M15 13h8"/></svg></div><h4>Hospitality &amp; Restaurants</h4></div>
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="1"/><path d="M8 7V4h8v3M3 13h18"/></svg></div><h4>Corporate &amp; B2B</h4></div>
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12h-4l-3 7-4-14-3 7H2"/></svg></div><h4>Healthcare</h4></div>
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div><h4>Retail &amp; Luxury</h4></div>
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><h4>FMCG &amp; E-commerce</h4></div>
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 1 0 4 0M15 17a2 2 0 1 0 4 0M5 17V9l2-4h8l4 4v8"/></svg></div><h4>Automotive</h4></div>
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div><h4>Startups &amp; Mobile Services</h4></div>
+    <div class="industry-tile"><div class="ind-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h4>Non-Profit &amp; CSR</h4></div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section id="clients" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:70px 0;">
+  <div style="padding:0 5vw;">
+    <div class="section-tag">Clients &amp; Projects</div>
+    <h2 class="section-title">Real brands our specialists have worked with</h2>
+    <p class="section-sub">Every name below is a real client or shipped project — not a placeholder.</p>
+  </div>
+
+  <div class="hunza-highlight" id="hunzaHighlight">
+    <div class="hh-tag">◆ One brand, four specialists</div>
+    <h4>Hunza Candle</h4>
+    <p>The clearest example of how the team works together: Muneeb built their ERP/CRM/HR and attendance systems, Abdul Raheem runs their logistics and B2B dashboards, Duaa handles customer service, and Husnain manages their social media — one client, four specialists, zero hand-off friction.</p>
+    <div class="hunza-avatars">
+      <div class="mini-avatar">MN</div>
+      <div class="mini-avatar">AR</div>
+      <div class="mini-avatar">DQ</div>
+      <div class="mini-avatar">HA</div>
+    </div>
+  </div>
+
+  <div class="client-marquee-wrap">
+    <div class="client-marquee-track">
+      <span class="client-chip"><span class="dot"></span>Hunza Candle</span>
+      <span class="client-chip"><span class="dot"></span>Deelab Fragrance</span>
+      <span class="client-chip"><span class="dot"></span>Toyota Hyderabad Motors</span>
+      <span class="client-chip"><span class="dot"></span>Saylani Welfare Trust</span>
+      <span class="client-chip"><span class="dot"></span>Fix It on Wheels</span>
+      <span class="client-chip"><span class="dot"></span>Zarvangi Bespoke</span>
+      <span class="client-chip"><span class="dot"></span>Netmatico</span>
+      <span class="client-chip"><span class="dot"></span>Hunza Candle</span>
+      <span class="client-chip"><span class="dot"></span>Deelab Fragrance</span>
+      <span class="client-chip"><span class="dot"></span>Toyota Hyderabad Motors</span>
+      <span class="client-chip"><span class="dot"></span>Saylani Welfare Trust</span>
+      <span class="client-chip"><span class="dot"></span>Fix It on Wheels</span>
+      <span class="client-chip"><span class="dot"></span>Zarvangi Bespoke</span>
+      <span class="client-chip"><span class="dot"></span>Netmatico</span>
+    </div>
+  </div>
+  <div class="client-marquee-wrap">
+    <div class="client-marquee-track reverse">
+      <span class="client-chip"><span class="dot"></span>Asasa</span>
+      <span class="client-chip"><span class="dot"></span>Brand Nova Solutions</span>
+      <span class="client-chip"><span class="dot"></span>Digitease Solution</span>
+      <span class="client-chip"><span class="dot"></span>Grocery Ghar</span>
+      <span class="client-chip"><span class="dot"></span>Vorn</span>
+      <span class="client-chip"><span class="dot"></span>MAISON</span>
+      <span class="client-chip"><span class="dot"></span>VELORA</span>
+      <span class="client-chip"><span class="dot"></span>Asasa</span>
+      <span class="client-chip"><span class="dot"></span>Brand Nova Solutions</span>
+      <span class="client-chip"><span class="dot"></span>Digitease Solution</span>
+      <span class="client-chip"><span class="dot"></span>Grocery Ghar</span>
+      <span class="client-chip"><span class="dot"></span>Vorn</span>
+      <span class="client-chip"><span class="dot"></span>MAISON</span>
+      <span class="client-chip"><span class="dot"></span>VELORA</span>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS & STACK -->
+<section id="tools" style="background:linear-gradient(180deg,transparent,rgba(139,47,255,0.04),transparent);">
+  <div class="section-tag">Tools &amp; Stack</div>
+  <h2 class="section-title">The complete stack behind the six pillars</h2>
+  <p class="section-sub">Every tool below is one the team actually uses day to day — grouped by the pillar it supports.</p>
+
+  <div class="tools-category">
+    <h4 class="tools-cat-title">Development &amp; Systems</h4>
+    <div class="tools-grid">
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div><span>React</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 0v20M2 12h20"/></svg></div><span>Node.js</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div><span>Express</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><span>MongoDB</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h2v8H8zM14 8h2v5a2 2 0 1 1-4 0"/></svg></div><span>PostgreSQL</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span>WhatsApp Business API</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M5 5v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5M10 10v6M14 10v6"/></svg></div><span>Twilio</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><circle cx="6" cy="16" r="2"/><circle cx="18" cy="16" r="2"/><path d="M12 6v6M12 12 6 14M12 12l6 2"/></svg></div><span>Git</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 6 9-6M3 8v10h18V8M3 8l9-4 9 4"/></svg></div><span>EmailJS</span></div>
+    </div>
+  </div>
+
+  <div class="tools-category">
+    <h4 class="tools-cat-title">Supply Chain &amp; Analytics</h4>
+    <div class="tools-grid">
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-6 4 4 4-8"/></svg></div><span>Power BI</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></div><span>Excel</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><span>Python</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="6" height="7"/><rect x="9" y="8" width="6" height="12"/><rect x="15" y="4" width="6" height="16"/></svg></div><span>SAP</span></div>
+    </div>
+  </div>
+
+  <div class="tools-category">
+    <h4 class="tools-cat-title">HR &amp; Operations</h4>
+    <div class="tools-grid">
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a8 8 0 0 1 16 0v4a2 2 0 0 1-2 2h-1v-6h3M3 15a2 2 0 0 0 2 2h1v-6H3z"/></svg></div><span>Oracle HRMS</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div><span>Microsoft Office</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v2"/><path d="M17 8a3 3 0 1 1 3.5 5.9"/><path d="M21 21v-2a5 5 0 0 0-3-4.6"/></svg></div><span>LinkedIn Recruiter</span></div>
+    </div>
+  </div>
+
+  <div class="tools-category">
+    <h4 class="tools-cat-title">Marketing &amp; Design</h4>
+    <div class="tools-grid">
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7v16l-18-7z"/><path d="M11 15v4a2 2 0 0 0 4 0v-1"/></svg></div><span>Meta Ads Manager</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-4-4 3-3-2-6 5"/></svg></div><span>Meta Business Suite</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="17" r="2.5"/><circle cx="6" cy="17" r="2.5"/></svg></div><span>Canva</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 1 1-8.5-8.5M21 3l-9 9"/></svg></div><span>Google Ads</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 16l3-4 3 3 5-7"/></svg></div><span>Google Analytics</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div><span>Shopify</span></div>
+    </div>
+  </div>
+
+  <div class="tools-category">
+    <h4 class="tools-cat-title">Social Platforms</h4>
+    <div class="tools-grid">
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1"/></svg></div><span>Instagram</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div><span>Facebook</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></div><span>TikTok</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"/></svg></div><span>X (Twitter)</span></div>
+      <div class="tool-tile"><div class="tool-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v2"/><path d="M17 8a3 3 0 1 1 3.5 5.9"/><path d="M21 21v-2a5 5 0 0 0-3-4.6"/></svg></div><span>LinkedIn</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILD YOUR TEAM (INTERACTIVE) -->
+<section id="builder">
+  <div class="section-tag">Build Your Team</div>
+  <h2 class="section-title">Tell us what you need — we'll tell you who's involved</h2>
+  <p class="section-sub">Select the services relevant to your project. We'll match you to the right specialists and hand you a ready-made message to send.</p>
+
+  <div class="builder-wrap">
+    <div class="builder-options" id="builderOptions">
+      <button class="builder-chip" data-key="dev" data-name="Web &amp; Business Systems" data-owner="Muneeb">
+        <span class="bc-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></span>
+        <span>Web &amp; Business Systems</span>
+      </button>
+      <button class="builder-chip" data-key="hr" data-name="HR &amp; Talent Operations" data-owner="Hafsa">
+        <span class="bc-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a8 8 0 0 1 16 0v4a2 2 0 0 1-2 2h-1v-6h3M3 15a2 2 0 0 0 2 2h1v-6H3z"/></svg></span>
+        <span>HR &amp; Talent Operations</span>
+      </button>
+      <button class="builder-chip" data-key="supply" data-name="Supply Chain &amp; Analytics" data-owner="Abdul Raheem">
+        <span class="bc-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="6" height="7"/><rect x="9" y="8" width="6" height="12"/><rect x="15" y="4" width="6" height="16"/></svg></span>
+        <span>Supply Chain &amp; Analytics</span>
+      </button>
+      <button class="builder-chip" data-key="marketing" data-name="Branding &amp; Performance Marketing" data-owner="Irtaza">
+        <span class="bc-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7v16l-18-7z"/><path d="M11 15v4a2 2 0 0 0 4 0v-1"/></svg></span>
+        <span>Branding &amp; Marketing</span>
+      </button>
+      <button class="builder-chip" data-key="cs" data-name="Customer Service &amp; Sales" data-owner="Duaa">
+        <span class="bc-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></span>
+        <span>Customer Service</span>
+      </button>
+      <button class="builder-chip" data-key="social" data-name="Social Media &amp; Content" data-owner="Husnain">
+        <span class="bc-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10l4-2v8l-4-2z"/></svg></span>
+        <span>Social Media</span>
+      </button>
+    </div>
+
+    <div class="builder-result" id="builderResult">
+      <div class="br-empty" id="brEmpty">Pick one or more services above to see your team.</div>
+      <div class="br-filled" id="brFilled" style="display:none;">
+        <h4>Your project team</h4>
+        <div class="br-avatars" id="brAvatars"></div>
+        <a class="btn btn-primary" id="brCta" target="_blank" style="margin-top:20px;">✦ Message this team on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WORK WITH US -->
+<section id="why-us" style="background:linear-gradient(180deg,transparent,rgba(139,47,255,0.04),transparent);">
+  <div class="section-tag">Why Clients Stay</div>
+  <h2 class="section-title metallic-text">Work with people who answer their own phone</h2>
+  <p class="section-sub">No account managers relaying messages, no six-freelancer juggling act — just the specialist doing the work, talking to you directly.</p>
+
+  <div class="whyus-grid">
+    <div class="whyus-card">
+      <div class="whyus-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.27a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg></div>
+      <h4>Direct access, always</h4>
+      <p>Every WhatsApp number and email on this site belongs to the person actually doing the work — not a shared inbox.</p>
+    </div>
+    <div class="whyus-card">
+      <div class="whyus-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h4>One team, real hand-offs</h4>
+      <p>Need marketing and a system built? The same two people already know each other's context — nothing gets lost in translation.</p>
+    </div>
+    <div class="whyus-card">
+      <div class="whyus-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/><path d="M12 8v4l3 2"/></svg></div>
+      <h4>Fast, honest timelines</h4>
+      <p>We'd rather tell you a build takes three weeks upfront than surprise you with a delay in week two.</p>
+    </div>
+    <div class="whyus-card">
+      <div class="whyus-icon"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h4>Work you can verify</h4>
+      <p>Every brand and project on this site is real — click through to individual portfolios and see the work directly.</p>
+    </div>
+  </div>
+
+  <div class="whyus-cta">
+    <h3 class="metallic-text">Ready to see which specialist you need?</h3>
+    <p>Tell us what you're building — we'll tell you who on the team should be in that conversation.</p>
+    <a href="#contact" class="btn btn-shine">✦ Let's talk about your project</a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="background:linear-gradient(180deg,transparent,rgba(139,47,255,0.04),transparent);">
+  <div class="section-tag">Approach</div>
+  <h2 class="section-title">From brief to running system</h2>
+  <p class="section-sub">The same four steps, whether it's a storefront, a campaign, or a hiring pipeline.</p>
+
+  <div class="process-wrap" id="processWrap">
+    <div class="process-step">
+      <div class="process-num"><span class="process-tag">01</span><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+      <h4>Discover</h4>
+      <p>Map the real workflow — how orders, leads, or candidates actually move today.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num"><span class="process-tag">02</span><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <h4>Design</h4>
+      <p>Build the system, brand, or dashboard around that real workflow — not a template.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num"><span class="process-tag">03</span><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18M5 3l14 4-14 4"/></svg></div>
+      <h4>Launch &amp; Track</h4>
+      <p>Ship it, then track the numbers that matter — reach, ROAS, delays, or resolution time.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num"><span class="process-tag">04</span><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+      <h4>Scale</h4>
+      <p>Double down on what's working, and expand the system across the rest of the business.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-tag">Testimonials</div>
+  <h2 class="section-title">What it's like working with us</h2>
+  <p class="section-sub">A sample of feedback across the six pillars of the team's work.</p>
+
+  <div class="test-wrap" id="testWrap">
+    <div class="test-slide active">
+      <div class="stars">★★★★★</div>
+      <p>Our reporting time dropped dramatically once their dashboard was in place — we finally know where every shipment is and what's causing delays.</p>
+      <div class="test-who"><div class="mini-avatar">OM</div><div><h5>Operations Manager</h5><span>FMCG Brand · Supply Chain &amp; Analytics</span></div></div>
+    </div>
+    <div class="test-slide">
+      <div class="stars">★★★★★</div>
+      <p>Enrollment inquiries picked up within the first month. The new campaign visuals finally looked like the school parents actually visit.</p>
+      <div class="test-who"><div class="mini-avatar">PR</div><div><h5>Principal</h5><span>Private School · Branding &amp; Marketing</span></div></div>
+    </div>
+    <div class="test-slide">
+      <div class="stars">★★★★★</div>
+      <p>Onboarding was the smoothest we've experienced — paperwork, payroll, and orientation were all sorted before day one even started.</p>
+      <div class="test-who"><div class="mini-avatar">NH</div><div><h5>New Hire</h5><span>Client Organization · HR &amp; Talent Ops</span></div></div>
+    </div>
+    <div class="test-slide">
+      <div class="stars">★★★★★</div>
+      <p>Weekend reservations noticeably picked up once the new reels and hyper-local ads went live — the menu photography alone changed how people saw us online.</p>
+      <div class="test-who"><div class="mini-avatar">CO</div><div><h5>Restaurant Owner</h5><span>Casual Dining · Branding &amp; Marketing</span></div></div>
+    </div>
+    <div class="test-slide">
+      <div class="stars">★★★★★</div>
+      <p>The Excel-based inventory system gave us real-time visibility for the first time — stockouts dropped noticeably within weeks of it going live.</p>
+      <div class="test-who"><div class="mini-avatar">SL</div><div><h5>Supply Chain Lead</h5><span>SME Retail · Supply Chain &amp; Analytics</span></div></div>
+    </div>
+  </div>
+  <div class="test-dots" id="testDots"></div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:linear-gradient(180deg,transparent,rgba(139,47,255,0.04),transparent);">
+  <div class="section-tag">Quick Answers</div>
+  <h2 class="section-title">A few things clients usually ask</h2>
+
+  <div class="faq-wrap" id="faqWrap">
+    <div class="faq-item">
+      <div class="faq-q"><h4>What does Obsidian Solutions actually do?</h4><div class="faq-chevron"><svg viewBox="0 0 24 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+      <div class="faq-a"><p>We're six specialists working as one team — covering web &amp; business systems, HR, supply chain analytics, branding &amp; performance marketing, customer service, and social media.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><h4>How do I know which specialist I need?</h4><div class="faq-chevron"><svg viewBox="0 0 24 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+      <div class="faq-a"><p>Chat with our assistant below and it'll point you to the right person, or browse the team section and reach out directly — most projects end up touching more than one of us anyway.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><h4>Do you work with businesses outside Pakistan?</h4><div class="faq-chevron"><svg viewBox="0 0 24 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+      <div class="faq-a"><p>Yes — most of our work so far has focused on Pakistani brands and payment patterns like Cash on Delivery and WhatsApp ordering, but the same systems adapt well to other markets.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><h4>What's the typical timeline for a project?</h4><div class="faq-chevron"><svg viewBox="0 0 24 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+      <div class="faq-a"><p>It depends on scope — a single storefront build usually runs 1–3 weeks, while marketing or HR engagements are often ongoing. We'll scope timeline and cost after a short discovery call.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><h4>Can you handle multiple parts of my business at once?</h4><div class="faq-chevron"><svg viewBox="0 0 24 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+      <div class="faq-a"><p>Yes — that's the reason Obsidian Solutions exists. Instead of coordinating six separate freelancers, you work with one team that already talks to each other.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><h4>What's the best way to reach the team?</h4><div class="faq-chevron"><svg viewBox="0 0 24 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+      <div class="faq-a"><p>Use the WhatsApp assistant in the corner to get routed to the right specialist, or reach anyone on the team directly from the directory below.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-panel">
+    <div class="section-tag" style="color:#D9BBFF;">Contact</div>
+    <h2>Let's build your next system</h2>
+    <p>Reach the specialist you need directly, or start with whoever's free — we hand off internally so you don't have to.</p>
+    <div class="directory-grid">
+      <div class="directory-item"><div class="mini-avatar">MN</div><div><h5>Muneeb</h5><span>Web &amp; Business Systems</span></div></div>
+      <div class="directory-item"><div class="mini-avatar">HS</div><div><h5>Hafsa Shaikh</h5><span>HR &amp; Talent Ops</span></div></div>
+      <div class="directory-item"><div class="mini-avatar">AR</div><div><h5>Abdul Raheem</h5><span>Supply Chain &amp; Analytics</span></div></div>
+      <div class="directory-item"><div class="mini-avatar">IK</div><div><h5>Irtaza Khan</h5><span>Branding &amp; Marketing</span></div></div>
+      <div class="directory-item"><div class="mini-avatar">DQ</div><div><h5>Duaa Qureshi</h5><span>Customer Service &amp; Sales</span></div></div>
+      <div class="directory-item"><div class="mini-avatar">HA</div><div><h5>Husnain Azmi</h5><span>Social Media &amp; Content</span></div></div>
+    </div>
+  </div>
+  <footer><img src="assets/logo-icon.png" class="footer-logo-mark" alt="Obsidian Solutions"><span>Obsidian Solutions — Pakistan · Six specialists, one system</span></footer>
+</section>
+
+<!-- TEAM MEMBER DETAIL OVERLAY -->
+<div class="detail-overlay" id="detailOverlay">
+  <button class="detail-back" id="detailBack">← Back to team</button>
+  <div class="detail-inner" id="detailInner"></div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- WHATSAPP CHATBOT -->
+<button class="wa-launcher" id="waLauncher" aria-label="Open chat">
+  <svg viewBox="0 0 32 32"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.383.703 4.6 1.917 6.463L4 29l7.73-1.877A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3zm0 21.75c-1.94 0-3.75-.516-5.32-1.418l-.382-.222-4.59 1.115 1.146-4.47-.25-.397A9.71 9.71 0 0 1 5.25 15c0-5.937 4.813-10.75 10.75-10.75S26.75 9.063 26.75 15 21.938 24.75 16.001 24.75zm5.61-8.06c-.307-.154-1.815-.895-2.097-.998-.281-.103-.487-.154-.692.154-.204.307-.79.998-.969 1.203-.179.205-.358.23-.665.077-.307-.154-1.296-.478-2.469-1.523-.912-.813-1.528-1.817-1.707-2.124-.179-.307-.02-.473.134-.626.138-.137.307-.358.46-.537.153-.18.204-.307.307-.512.102-.205.051-.384-.026-.538-.077-.154-.692-1.667-.948-2.284-.25-.6-.505-.52-.692-.53-.179-.008-.384-.01-.589-.01-.205 0-.538.077-.82.384-.281.307-1.075 1.05-1.075 2.562 0 1.512 1.1 2.973 1.253 3.178.153.205 2.164 3.305 5.243 4.634.733.316 1.304.505 1.75.646.735.234 1.404.201 1.933.122.59-.088 1.815-.742 2.071-1.459.256-.717.256-1.332.179-1.459-.077-.128-.281-.205-.588-.359z"/></svg>
+</button>
+
+<div class="wa-panel" id="waPanel">
+  <div class="wa-head">
+    <div class="mini-avatar">OS</div>
+    <div>
+      <h4>Obsidian Assistant</h4>
+      <p><span class="dot-live" style="background:#fff;"></span> Replies in a few minutes</p>
+    </div>
+  </div>
+  <div class="wa-body" id="waBody">
+    <div class="wa-msg bot">Hi 👋 I'm the Obsidian Solutions assistant. Tell me what you need, or tap an option below — I'll point you to the right specialist.</div>
+  </div>
+  <div class="wa-quick" id="waQuick">
+    <button class="qbtn" data-q="dev">Web &amp; Systems</button>
+    <button class="qbtn" data-q="hr">HR &amp; Talent</button>
+    <button class="qbtn" data-q="supply">Supply Chain</button>
+    <button class="qbtn" data-q="marketing">Branding &amp; Ads</button>
+    <button class="qbtn" data-q="cs">Customer Service</button>
+    <button class="qbtn" data-q="social">Social Media</button>
+  </div>
+  <div class="wa-input-row">
+    <input type="text" id="waInput" placeholder="Type a question…">
+    <button id="waSend" aria-label="Send">➤</button>
+  </div>
+  <div class="wa-footer">
+    <a class="wa-cta" href="https://wa.me/923000000000?text=Hi%20Obsidian%20Solutions%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank">Continue on WhatsApp →</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
